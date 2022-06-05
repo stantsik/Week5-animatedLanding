@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: #777;
+}
+
+header {
+    height: 95vh;
+    background-image: linear-gradient(to bottom right, rgba(69, 56, 56, 0.674), rgba(229, 152, 152, 0.566)), 
+    url("../images/pexels-alexy-almond-3758056.jpg");
+    background-size: cover;
+    background-position: bottom;
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);
+    position: relative;
+}
+
+.text-box {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 1.1rem;
+    color: rgb(57, 55, 55);
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+}
+
+@keyframes moveInLeft {
+    0% {
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(30px);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.heading-primary-sub {
+    color: rgb(57, 55, 55);
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moveInRight {
+    0% {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(-20px);
+    }
+    
+    90% {
+        transform: translateX(15px);
+    }
+
+    100% {
+        transform: translateX();
+        opacity: 1;
+    }
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid white;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    color: whitesmoke;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background-color: rgba(104, 104, 104, 0.376);
+    color: rgba(193, 193, 193, 0.935);
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+footer p{
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: rgb(53, 53, 53);
+    animation: fadeIn 3s;
+    overflow: hidden;
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
